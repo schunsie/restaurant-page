@@ -1,3 +1,5 @@
 import "./style.css"
+import { renderHome } from "./home"
 
-console.log("Hello world!");
+// initial render
+renderHome()
