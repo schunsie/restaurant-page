@@ -1,6 +1,7 @@
 import "./style.css"
 import { renderHome } from "./home"
 import { renderMenu } from "./menu"
+import { renderContact } from "./contact";
 
 // Initialize variables
 const content = document.querySelector('.content');
@@ -28,11 +29,11 @@ function navHandling(event) {
             clearContent();
             renderMenu();
             break;
-        // case 'Contact':
-        //     toggleActive(target);
-        //     clearContent();
-        //     renderContact();
-        //     break;
+        case 'contact':
+            toggleActive(t);
+            clearContent();
+            renderContact();
+            break;
     }
 }
 

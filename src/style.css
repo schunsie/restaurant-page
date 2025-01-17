@@ -18,7 +18,7 @@ html, body {
     color: var(--white);
 }
 
-button {
+button, input, textarea {
     font: inherit;
     color: inherit;
 }
@@ -210,4 +210,90 @@ nav > button {
 }
 .menu-list .menu-item:nth-child(5) {
     animation: 1s menu-slide 500ms forwards;
+}
+
+/* Contact */
+
+.contact {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    width: 90vw;
+    max-width: 600px;
+
+    h3 + p:first-of-type {
+        margin-bottom: 1.5rem;
+    }
+
+    form {
+        margin-top: 1rem;
+        border: 1px solid var(--brown);
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    label {
+        font-weight: 600;
+    }
+
+    input {
+        margin-bottom: 0.75rem;
+        padding: 0.25rem;
+        border: none;
+        border-bottom: 1px solid var(--citrine);
+        background: none;
+        color: var(--white);
+        
+        &:focus {
+            outline: none;
+        }
+    }
+
+    textarea {
+        resize: none;
+        height: 200px;
+        background: #e5e5e50a;
+        border: 1px var(--citrine) outset;
+        padding: 0.5rem;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.green {
+    color: var(--citrine);
+}
+
+#send {
+    position: relative;
+    top: 30px;
+    width: 80%;
+    max-width: 250px;
+    margin: 0 auto;
+    background: var(--smoky-black);
+    border: 2px var(--brown) outset;
+    border-radius: 4px;
+    padding: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.5s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.phoneNum {
+    display: flex;
+    align-items: center;
+
+    > img {
+        margin-right: 4px;
+    }
 }
