@@ -2,7 +2,7 @@ import "./style.css"
 import { renderHome } from "./home"
 
 // Initial render
-renderHome()
+// renderHome()
 
 // Navigation 
 const nav = document.querySelector('nav')
