@@ -42,6 +42,16 @@ header {
     width: 100%;
     max-width: 1350px;
 
+    .branding {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+    }
+    
+    img {
+        width: 2rem;
+    }
+
     nav {
         display: flex;
         gap: 2rem;
@@ -52,10 +62,11 @@ header {
         border: none;
         font-size: 1.1rem;
         position: relative;
-        transition: all 0.5s;
+        transition: transform 0.5s;
     }
 }
 
+/* Button transition */
 nav > button {
     cursor: pointer;
 
@@ -68,7 +79,7 @@ nav > button {
         content: '';
         height: 3px;
         background-color: #d96c06;
-        transition: all 0.5s;
+        transition: left 0.5s, right 0.5s;
         border-radius: 2px;
     }
 
