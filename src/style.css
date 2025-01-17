@@ -83,12 +83,13 @@ nav > button {
         border-radius: 2px;
     }
 
-    &:hover::after {
+    &:hover::after,
+    &.active::after {
         left: 0;
         right: 0;
     }
 
-    &:hover {
+    &:not(.active):hover {
         transform: scale(1.2);
     }
 }
