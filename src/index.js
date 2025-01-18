@@ -17,6 +17,8 @@ nav.addEventListener('click', navHandling);
 function navHandling(event) {
     const t = event.target;
     const targetID = t.id;
+    console.log(targetID);
+    console.log(t);
 
     switch (targetID) {
         case 'home':
@@ -34,6 +36,9 @@ function navHandling(event) {
             clearContent();
             renderContact();
             break;
+        case 'nav-icon':
+            toggleResponsiveNav()
+            break;
     }
 }
 
@@ -48,4 +53,10 @@ function toggleActive(newActive) {
     // Set new active
     newActive.classList.toggle('active');
     activePage = newActive.id;
+}
+
+function toggleResponsiveNav() {
+    console.log('test');
+    const btns = document.querySelectorAll('nav button:not(#icon)');
+    btns.forEach(btn => btn.classList.toggle('responsive'));
 }
